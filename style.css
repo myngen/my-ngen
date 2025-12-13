@@ -1,171 +1,151 @@
+/* [My] n-GEN | CORE STYLESHEET v1.0 */
+/* ESTADO: OPTIMIZADO PARA CARGA INSTANTÁNEA */
+
 :root {
-    --nobel-blue: #0055A4;
-    --nobel-yellow: #FFD700;
-    --nobel-red: #E4002B;
-    --nobel-dark: #0A0C10;
-    --nobel-gray: #A0AEC0;
-    --white: #FFFFFF;
+    /* PALETA NOBEL - DEFINICIÓN DE VARIABLES */
+    --void-black: #0A0C10;       /* Fondo Infinito */
+    --nobel-blue: #0055A4;       /* Datos / Estructura */
+    --alert-yellow: #FFD700;     /* Acción / Advertencia */
+    --text-primary: #E0E0E0;     /* Lectura Óptima */
+    --text-dim: #6E7681;         /* Metadatos */
+    
+    /* TIPOGRAFÍA TÁCTICA */
+    --font-stack: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    
+    /* ESPACIADO RITUALIZADO */
+    --spacing-unit: 1rem;
+}
+
+/* RESET MILITAR: ELIMINAR PROCESOS INNECESARIOS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
 }
 
 body {
-    background-color: var(--nobel-dark);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    background-color: var(--void-black);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden; /* Evitar scroll horizontal no deseado */
 }
 
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* UX HÁPTICA: ENLACES Y BOTONES */
+a {
+    text-decoration: none;
+    color: var(--nobel-blue);
+    transition: none; /* VELOCIDAD ABSOLUTA: Sin transiciones suaves */
 }
 
-/* LOGO */
-.logo {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.5rem;
-    font-weight: 700;
+a:hover {
+    background-color: var(--nobel-blue);
+    color: var(--void-black);
+    cursor: crosshair; /* Puntero de precisión */
+}
+
+/* TIPOGRAFÍA DE AUTORIDAD */
+h1, h2, h3 {
+    text-transform: uppercase;
     letter-spacing: -1px;
+    font-weight: 700;
 }
-.bracket { color: var(--nobel-gray); }
-.n { font-style: italic; }
 
-header {
+h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: var(--spacing-unit); }
+h2 { font-size: 1.8rem; color: var(--alert-yellow); border-left: 4px solid var(--nobel-blue); padding-left: 1rem; }
+.mono-text { letter-spacing: 0.05em; font-size: 0.9rem; color: var(--text-dim); }
+
+/* CONTENEDORES DE ESTRUCTURA */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TERMINAL HEADER */
+header.terminal-head {
+    border-bottom: 1px solid var(--nobel-blue);
+    padding: 20px 0;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 10px;
 }
 
-.status {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.8rem;
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.status-indicator::before {
+    content: "●";
+    color: #00FF00;
+    margin-right: 5px;
+    animation: blink 2s infinite step-end;
+}
+
+/* HERO SECTION: EL MANIFIESTO VISUAL */
+.hero {
+    padding: 60px 0;
+    border: 1px dashed var(--text-dim);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* SELECTOR BINARIO (SPLIT SCREEN LÓGICO) */
+.binary-choice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--text-dim); /* Color de las líneas divisorias */
+    border: 1px solid var(--text-dim);
+}
+
+.choice-node {
+    background: var(--void-black);
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.choice-node:hover {
+    border: 1px solid var(--alert-yellow);
+}
+
+.btn-terminal {
+    display: inline-block;
+    border: 1px solid var(--nobel-blue);
+    padding: 15px 30px;
+    margin-top: 20px;
     color: var(--nobel-blue);
-}
-
-.blink { animation: blinker 1.5s linear infinite; color: var(--nobel-yellow); }
-@keyframes blinker { 50% { opacity: 0; } }
-
-/* HERO */
-.hero { text-align: left; margin-bottom: 2rem; }
-h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-.highlight { color: var(--nobel-blue); }
-.sub-hero {
-    color: var(--nobel-gray);
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* TERMINAL BOX (FORMULARIO) */
-.terminal-box {
-    background: #111;
-    border: 1px solid var(--nobel-gray);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 85, 164, 0.1);
-}
-
-.terminal-header {
-    background: #222;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #333;
-}
-
-.dot { height: 10px; width: 10px; border-radius: 50%; margin-right: 5px; display: inline-block; }
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-.title-bar { 
-    font-family: 'Roboto Mono', monospace; 
-    font-size: 0.7rem; 
-    color: #888; 
-    margin-left: 10px; 
-}
-
-.terminal-body { padding: 20px; }
-
-.cmd {
-    font-family: 'Roboto Mono', monospace;
-    color: var(--nobel-yellow);
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-}
-
-/* INPUTS */
-.input-group { margin: 20px 0; }
-label {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.8rem;
-    color: var(--nobel-blue);
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="email"] {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid var(--nobel-gray);
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    padding: 10px 0;
-    outline: none;
-    transition: 0.3s;
-    box-sizing: border-box; /* Fix para el padding */
-}
-
-input[type="email"]:focus {
-    border-bottom: 2px solid var(--nobel-yellow);
-}
-
-/* BOTÓN NOBEL */
-.btn-primary {
-    width: 100%;
-    background-color: var(--nobel-blue);
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 700;
-    padding: 15px;
-    border: none;
-    cursor: pointer;
+    font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s;
-    margin-top: 10px;
 }
 
-.btn-primary:hover {
-    background-color: var(--nobel-yellow);
-    color: var(--nobel-dark);
+.btn-terminal:hover {
+    background: var(--nobel-blue);
+    color: var(--void-black);
 }
 
-.disclaimer {
-    font-size: 0.7rem;
-    color: #555;
-    margin-top: 15px;
-    text-align: center;
+.btn-alert {
+    border-color: var(--alert-yellow);
+    color: var(--alert-yellow);
 }
 
-footer {
-    margin-top: 3rem;
-    text-align: center;
-    color: #333;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.7rem;
+.btn-alert:hover {
+    background: var(--alert-yellow);
+    color: var(--void-black);
+}
+
+/* UTILIDADES */
+.glitch-text { position: relative; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* RESPONSIVE: MÓVIL TÁCTICO */
+@media (max-width: 768px) {
+    .binary-choice { grid-template-columns: 1fr; }
+    h1 { font-size: 2rem; }
 }
