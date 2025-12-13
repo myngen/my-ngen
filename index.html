@@ -3,65 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[My] n-GEN | System Access</title>
+    <meta name="description" content="[My] n-GEN | Infraestructura de Ingeniería Biológica. Optimización humana y sistemas de rendimiento.">
+    <meta name="robots" content="index, follow">
+    
+    <title>[My] n-GEN :: SISTEMA ONLINE</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        /* CSS CRÍTICO INYECTADO PARA VELOCIDAD DE PRIMER PINTADO */
+        body { opacity: 1; }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <header>
+        <header class="terminal-head">
             <div class="logo">
-                <span class="bracket">[</span>My<span class="bracket">]</span> <span class="n">n</span>-GEN
+                <span style="color:var(--text-dim)">[</span>My<span style="color:var(--text-dim)">]</span> n-GEN
             </div>
-            <div class="status">STATUS: <span class="blink">ONLINE</span></div>
+            <div class="mono-text status-indicator">SYSTEM: ONLINE_</div>
         </header>
 
         <section class="hero">
-            <h1>HACKEAR LA OBSOLESCENCIA <br><span class="highlight">PROGRAMADA.</span></h1>
-            <p class="sub-hero">
-                Ingeniería de rendimiento para sistemas biológicos humanos.<br>
-                Micelización. Trazabilidad. Potencia.
-            </p>
-        </section>
-
-        <section class="terminal-box">
-            <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title-bar">access_kernel.exe</span>
-            </div>
-            <div class="terminal-body">
-                <p class="cmd">> INICIAR PROTOCOLO DE ACTIVACIÓN...</p>
-                <p class="cmd">> INTRODUZCA CREDENCIALES PARA ACCESO AL MANUAL.</p>
-                
-                <form action="https://formsubmit.co/bff35fd3c6beb501c984a737a78618f8" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="NUEVO NODO ACTIVADO: n-GEN">
-
-                    <div class="input-group">
-                        <label for="email">USER_EMAIL:</label>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@sistema.com" required>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary">
-                        [ EJECUTAR_ACCESO ]
-                    </button>
-                </form>
-                <p class="disclaimer">
-                    * Al ejecutar, recibirás el "Protocolo V-NERGY" en PDF y acceso al Newsletter Táctico.
+            <div class="container" style="max-width: 700px;">
+                <p class="mono-text">>> INICIANDO PROTOCOLO DE CONSCIENCIA...</p>
+                <br>
+                <h1>HACKEAR LA OBSOLESCENCIA HUMANA PROGRAMADA</h1>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+                    No somos una tienda de suplementos. Somos una infraestructura de ingeniería biológica diseñada para revertir la decadencia sistémica.
+                </p>
+                <p class="mono-text" style="color: var(--alert-yellow);">
+                    ADVERTENCIA: Este sistema requiere disciplina binaria.
                 </p>
             </div>
         </section>
 
-        <footer>
-            <p>CORRIENDO EN HARDWARE OMNILIFE // OPTIMIZADO POR [My] n-GEN</p>
-            <p class="tiny">Build 2025.Nobel</p>
+        <section style="margin-bottom: 60px;">
+            <h3 class="mono-text" style="text-align: center; margin-bottom: 20px;">>> SELECCIONE PERFIL DE ACCESO:</h3>
+            
+            <div class="binary-choice">
+                <div class="choice-node">
+                    <h2 style="border:none; color: var(--text-primary);">BIO-ARCHITECT</h2>
+                    <p class="mono-text" style="margin: 15px 0;">
+                        Busco optimizar mi hardware biológico. Requiero protocolos de alto rendimiento y biodisponibilidad inmediata.
+                    </p>
+                    <a href="protocols.html" class="btn-terminal">
+                        > ACCEDER A PROTOCOLOS
+                    </a>
+                </div>
+
+                <div class="choice-node">
+                    <h2 style="border:none; color: var(--text-primary);">SYSTEM OPERATOR</h2>
+                    <p class="mono-text" style="margin: 15px 0;">
+                        Busco la licencia del sistema operativo. Deseo implementar la infraestructura de negocio [My] n-GEN.
+                    </p>
+                    <a href="system_os.html" class="btn-terminal btn-alert">
+                        > SOLICITAR LICENCIA
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer style="border-top: 1px solid #333; padding: 40px 0; font-size: 0.8rem; color: #666;">
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <p>[My] n-GEN CORE © 2025</p>
+                    <p>VERSION: STABLE_BUILD_2.1</p>
+                </div>
+                <div style="text-align: right;">
+                    <a href="manifesto.html" style="margin-left: 20px;">SOURCE_CODE</a>
+                    <a href="founder_log.html" style="margin-left: 20px;">ADMIN_LOG</a>
+                </div>
+            </div>
         </footer>
     </div>
 
 </body>
-
 </html>
-
