@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[My] n-GEN :: UPLINK REQUEST</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ESTILOS DE FORMULARIO DE TERMINAL */
+        .terminal-input {
+            width: 100%;
+            background: #0f1218;
+            border: 1px solid #333;
+            color: var(--nobel-blue);
+            padding: 15px;
+            font-family: var(--font-stack);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .terminal-input:focus {
+            border-color: var(--alert-yellow);
+            background: #151920;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" style="max-width: 600px; padding-top: 40px;">
+        
+        <header class="terminal-head">
+            <a href="index.html" class="logo">< [ ABORTAR ]</a>
+            <div class="mono-text" style="color: var(--alert-yellow);">SECURE_CHANNEL</div>
+        </header>
+
+        <h1 style="color: var(--nobel-blue);">SOLICITUD DE ENLACE</h1>
+        <p class="mono-text" style="margin-bottom: 30px;">
+            El acceso a los protocolos [My] n-GEN requiere validación manual. Complete los datos para iniciar el handshake.
+        </p>
+
+        <form action="https://formsubmit.co/TU_EMAIL_AQUI" method="POST">
+            
+            <input type="hidden" name="_next" value="https://TU_USUARIO_GITHUB.github.io/TU_REPO/access_granted.html">
+            <input type="hidden" name="_subject" value="[n-GEN] NUEVA SOLICITUD DE ACCESO">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+
+            <div>
+                <label for="name">ID / NOMBRE OPERATIVO:</label>
+                <input type="text" name="name" id="name" class="terminal-input" required placeholder="Ingresar identificación...">
+            </div>
+
+            <div>
+                <label for="email">PUNTO DE CONTACTO (EMAIL):</label>
+                <input type="email" name="email" id="email" class="terminal-input" required placeholder="email@dominio.com">
+            </div>
+
+            <div>
+                <label for="protocol">PROTOCOLO REQUERIDO:</label>
+                <select name="protocol" id="protocol" class="terminal-input" style="color: var(--text-primary);">
+                    <option value="FOCUS_PROTOCOL">PROTOCOL_FOCUS (Cognitivo)</option>
+                    <option value="REPAIR_PROTOCOL">PROTOCOL_REPAIR (Estructural)</option>
+                    <option value="SYSTEM_LICENSE">SYSTEM OPERATOR (Licencia de Negocio)</option>
+                    <option value="GENERAL_INQUIRY">CONSULTA DE ARQUITECTURA</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">LOG DE OBJETIVOS (OPCIONAL):</label>
+                <textarea name="message" id="message" rows="4" class="terminal-input" placeholder="Describa su bio-fricción o interés comercial..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-terminal btn-alert" style="width: 100%; cursor: pointer;">
+                >> ENVIAR PAQUETE DE DATOS
+            </button>
+        </form>
+
+        <footer style="margin-top: 40px; text-align: center; font-size: 0.7rem; color: #444;">
+            ENCRIPTACIÓN: STANDARD_TLS. SUS DATOS PERMANECEN EN EL NÚCLEO.
+        </footer>
+    </div>
+
+</body>
+</html>
