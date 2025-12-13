@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[My] n-GEN :: HARDWARE REPOSITORY</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ESTILOS ESPECÍFICOS PARA EL GRID DE PROTOCOLOS */
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2px;
+            background: var(--text-dim);
+            border: 1px solid var(--text-dim);
+            margin-top: 40px;
+        }
+
+        .protocol-card {
+            background: var(--void-black);
+            padding: 30px;
+            position: relative;
+            transition: all 0s; /* Zero Latency */
+        }
+
+        .protocol-card:hover {
+            background: #0f1218;
+        }
+
+        .protocol-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--text-dim);
+            display: none;
+        }
+
+        .protocol-card:hover::before {
+            display: block;
+            background: var(--alert-yellow);
+        }
+
+        .tech-spec {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-top: 10px;
+            border-top: 1px dashed #333;
+            padding-top: 10px;
+        }
+
+        .tech-tag {
+            background: #1a1a1a;
+            color: var(--nobel-blue);
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="terminal-head">
+            <a href="index.html" class="logo">< [ VOLVER AL KERNEL ]</a>
+            <div class="mono-text">MODULE: HARDWARE_LIST</div>
+        </header>
+
+        <section class="container" style="max-width: 900px;">
+            <div style="border-left: 4px solid var(--alert-yellow); padding-left: 20px; margin-bottom: 40px;">
+                <h1>ACTUALIZACIÓN DE HARDWARE</h1>
+                <p style="font-size: 1.1rem; max-width: 600px;">
+                    Protocolos de alta biodisponibilidad micelizada.
+                    <br>
+                    <span class="mono-text" style="color: var(--text-dim);">>> CRITERIO: Absorción en &lt;10 minutos (Zero Latency).</span>
+                </p>
+            </div>
+
+            <div class="protocol-grid">
+                
+                <article class="protocol-card">
+                    <div class="mono-text" style="color: var(--alert-yellow);">[ DISPONIBLE ]</div>
+                    <h2 style="border:none; padding:0; margin-top:10px; font-size: 1.5rem;">PROTOCOL_REPAIR</h2>
+                    <h3 style="font-size: 1rem; color: var(--text-dim); margin-bottom: 20px;">MATRIZ EXTRACELULAR (ECM)</h3>
+                    
+                    <p>
+                        Optimización de la regeneración de tejidos y síntesis de hormona de crecimiento. Diseñado para el mantenimiento estructural profundo.
+                    </p>
+
+                    <div class="tech-spec">
+                        <p><span class="tech-tag">INPUT:</span> L-Arginina Complex</p>
+                        <p><span class="tech-tag">TARGET:</span> Músculo / Tendón / Hueso</p>
+                        <p><span class="tech-tag">LATENCIA:</span> Baja (Nocturno)</p>
+                    </div>
+
+                    <a href="protocol_repair.html" class="btn-terminal" style="width: 100%; text-align: center; margin-top: 20px;">
+                        > INSPECCIONAR CÓDIGO
+                    </a>
+                </article>
+
+                <article class="protocol-card">
+                    <div class="mono-text" style="color: var(--alert-yellow);">[ HIGH DEMAND ]</div>
+                    <h2 style="border:none; padding:0; margin-top:10px; font-size: 1.5rem;">PROTOCOL_FOCUS</h2>
+                    <h3 style="font-size: 1rem; color: var(--text-dim); margin-bottom: 20px;">NEURAL OVERCLOCK</h3>
+                    
+                    <p>
+                        Eliminación de la niebla mental y aumento del voltaje sináptico. Energía sostenida sin picos de glucosa inestables.
+                    </p>
+
+                    <div class="tech-spec">
+                        <p><span class="tech-tag">INPUT:</span> Complejo B + Cafeína Natural</p>
+                        <p><span class="tech-tag">TARGET:</span> Neurotransmisores / CPU</p>
+                        <p><span class="tech-tag">LATENCIA:</span> Inmediata (3-8 min)</p>
+                    </div>
+
+                    <a href="protocol_focus.html" class="btn-terminal" style="width: 100%; text-align: center; margin-top: 20px;">
+                        > INSPECCIONAR CÓDIGO
+                    </a>
+                </article>
+
+            </div>
+
+            <div style="margin-top: 60px; background: #111; padding: 20px; font-size: 0.9rem;">
+                <p class="mono-text" style="color: var(--nobel-blue);">>> NOTA DEL ARQUITECTO:</p>
+                <p style="margin-top: 10px;">
+                    Estos módulos no son "suplementos vitamínicos". Son herramientas de ingeniería. Requieren constancia en la ejecución para reescribir la biología base del usuario.
+                </p>
+            </div>
+
+        </section>
+
+        <footer style="margin-top: 60px; border-top: 1px solid #333; padding: 20px 0; text-align: center;">
+            <p class="mono-text" style="color: #666;">[My] n-GEN HARDWARE DIVISION</p>
+        </footer>
+    </div>
+
+</body>
+</html>
