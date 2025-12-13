@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[My] n-GEN :: ADMIN LOG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="terminal-head">
+            <a href="index.html" class="logo">< [ VOLVER AL KERNEL ]</a>
+            <div class="mono-text">USER: ADMIN_01</div>
+        </header>
+
+        <article class="container" style="max-width: 750px;">
+            <div style="display: flex; align-items: baseline; gap: 15px; flex-wrap: wrap;">
+                <h1>LOG DEL ARQUITECTO</h1>
+                <span class="mono-text" style="background: var(--nobel-blue); color: var(--void-black); padding: 2px 8px;">VERIFICADO</span>
+            </div>
+
+            <div style="background: #111; padding: 20px; border-left: 4px solid var(--nobel-blue); margin-bottom: 40px;">
+                <p class="mono-text" style="font-size: 0.9rem; color: var(--text-dim);">
+                    ID: FUNDADOR<br>
+                    CLASE: INGENIERO DE SISTEMAS / ARQUITECTO<br>
+                    ESTADO: ACTIVO
+                </p>
+            </div>
+
+            <h2 style="color: var(--text-primary); border: none; padding: 0;">>> LA ÉTICA BINARIA</h2>
+            
+            <p style="margin-top: 20px;">
+                <strong>No soy médico, ni pretendo serlo. Soy Ingeniero.</strong>
+            </p>
+            <p style="margin-top: 15px;">
+                Mi mente está entrenada para detectar ineficiencias (bugs), optimizar chasis biológicos y exigir resultados que se puedan compilar en data real. Durante años, analicé el sector de la salud tradicional con el escepticismo de quien entiende los fallos de un sistema.
+            </p>
+
+            <blockquote style="margin: 30px 0; font-family: monospace; color: var(--alert-yellow); border: 1px dashed var(--text-dim); padding: 15px;">
+                "O el sistema funciona y genera un output medible, o es basura informática."
+            </blockquote>
+
+            <h3>¿POR QUÉ OMNILIFE COMO HARDWARE?</h3>
+            <p>
+                No seleccioné proveedores por ideología, sino por <strong>rendimiento (benchmark)</strong>. Tras auditar la data, encontré su tecnología de Micelización.
+            </p>
+            <p style="margin-top: 10px;">
+                Rompe los límites de la física digestiva tradicional, entregando nutrientes al torrente sanguíneo en minutos. Eso no es suplementación; es inyección de código limpio en tu sistema metabólico.
+            </p>
+
+            <hr style="border: 0; border-bottom: 1px solid #333; margin: 40px 0;">
+
+            <h3>MISIÓN OPERATIVA</h3>
+            <p>
+                No estoy aquí para venderte esperanza. Estoy aquí para ofrecerte <strong>curaduría táctica</strong> e ingeniería nutricional de alta trazabilidad.
+            </p>
+
+            <div style="margin-top: 40px; text-align: right;">
+                <p class="mono-text" style="font-style: italic;">// FIN DE TRANSMISIÓN</p>
+                <h4 style="margin-top: 10px;">[My] n-GEN ARCHITECT</h4>
+            </div>
+        </article>
+
+        <nav style="margin-top: 60px; padding: 20px 0; border-top: 1px solid #333; display: flex; justify-content: center; gap: 20px;">
+            <a href="manifesto.html" class="mono-text">[ LEER MANIFIESTO ]</a>
+            <a href="license_model.html" class="mono-text">[ MODELO DE NEGOCIO ]</a>
+        </nav>
+    </div>
+
+</body>
+</html>
