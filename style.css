@@ -1,172 +1,225 @@
-/* [My] n-GEN | ESTILO: INGENIERÍA HUMANA (CLEAN & TRUST) */
-/* VIBE: Profesional, Cercano, Luminoso (Tipo Clínica Privada o Banco Moderno) */
+/* [My] n-GEN | LATEX STYLE INTERFACE v2.0 */
+/* BASE: Ingeniería, Limpieza, Autoridad Técnica */
 
 :root {
-    /* PALETA TRIANA-TECH */
-  :root {
-    --nobel-blue: #0055A4;
-    --nobel-yellow: #FFD700;
-    --nobel-red: #E4002B;
-    --nobel-dark: #0A0C10;
-    --nobel-gray: #A0AEC0;
-    --white: #FFFFFF;
-}
+    /* --- PALETA ELEMENTAL NOBEL (Extraída de ngen_slides.cls) --- */
+    --nobel-blue:   #0055A4;  /* Estructura / Headers */
+    --nobel-yellow: #FFD700;  /* Acentos / Energía */
+    --nobel-red:    #E4002B;  /* Alertas / Puntos Críticos */
+    --nobel-dark:   #0A0C10;  /* Consola / Pie de página */
+    --nobel-gray:   #A0AEC0;  /* Bordes pasivos / Estructura */
+    --nobel-white:  #FFFFFF;  /* Fondo Base (Papel Académico) */
+    --tech-green:   #00FF41;  /* Status Online */
     
-    /* TIPOGRAFÍA HUMANA */
-    --font-stack: 'Inter', 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+    /* --- DERIVADOS PARA UI --- */
+    --blue-box-bg:  #F0F7FF;  /* Fondo suave para las cajas azules */
+    --shadow-card:  0 4px 6px -1px rgba(0, 85, 164, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
     
-    --radius-card: 12px;
-    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    /* --- TIPOGRAFÍA (Professional Fonts) --- */
+    --font-main: 'Arial', 'Helvetica Neue', Helvetica, sans-serif; /* \setmainfont{Arial} */
+    --font-mono: 'Courier New', Courier, monospace; /* \setmonofont{Courier New} */
+    
+    --radius-beamer: 4px; /* Bordes ligeramente suavizados, pero técnicos */
 }
 
-/* RESET */
-* { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
+/* RESET ESTRUCTURAL */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: var(--bg-base);
-    color: var(--text-primary);
-    font-family: var(--font-stack);
+    background-color: var(--nobel-white);
+    color: var(--nobel-dark);
+    font-family: var(--font-main);
     line-height: 1.6;
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* CONTENEDOR CENTRAL (La Oficina Virtual) */
+/* LAYOUT CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ENCABEZADO: PROFESIONAL Y LIMPIO */
-.terminal-head {
+/* --- HEADER: ESTILO BEAMER --- */
+header.slide-header {
+    background: var(--nobel-white);
+    border-bottom: 2px solid var(--nobel-blue); /* La línea azul del slide */
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #E2E8F0;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--brand-blue);
+/* LOGO TIPO LATEX (\logoNGEN) */
+.logo-tex {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--nobel-dark);
     text-decoration: none;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
 }
 
-.status-indicator {
-    font-size: 0.85rem;
-    color: var(--success-green);
-    font-weight: 600;
-    background: #D1FAE5;
-    padding: 5px 12px;
-    border-radius: 20px;
+.logo-bracket { color: var(--nobel-dark); font-weight: bold; }
+.logo-my { font-family: var(--font-main); font-weight: normal; }
+.logo-n { font-style: italic; }
+.logo-gen { font-weight: bold; color: var(--nobel-dark); }
+
+/* INDICADOR DE ESTADO */
+.status-badge {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background: var(--nobel-dark);
+    color: var(--tech_green); /* Error en variable CSS corregido: usar tech-green */
+    color: #00FF41; 
+    padding: 4px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--nobel-gray);
 }
 
-/* TEXTOS DE MARKETING (HUMANIZADOS) */
-h1 { font-size: 2.5rem; line-height: 1.2; color: var(--brand-blue); margin-bottom: 1rem; letter-spacing: -1px; }
-h2 { font-size: 1.5rem; color: var(--brand-blue); margin-bottom: 15px; }
-h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
-p { color: var(--text-secondary); margin-bottom: 20px; font-size: 1.05rem; }
-
-.mono-text {
-    /* Usamos esto para notas técnicas pequeñas, como la letra chica de un contrato */
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* --- TIPOGRAFÍA & TEXTOS --- */
+h1 {
+    color: var(--nobel-blue); /* \setbeamercolor{frametitle} */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
-/* HERO SECTION: BIENVENIDA AL VECINO */
-.hero {
-    padding: 60px 0;
-    text-align: center; /* Centrado para mayor amabilidad */
-}
-
-/* TARJETAS DE OPCIÓN (TIPO MENÚ DE SERVICIOS) */
-.binary-choice {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-    .binary-choice { grid-template-columns: 1fr; }
-}
-
-.choice-node {
-    background: var(--surface-white);
-    padding: 40px;
-    border-radius: var(--radius-card);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid #E2E8F0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: left; /* Alineado a la izquierda para lectura cómoda */
-}
-
-.choice-node:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: var(--brand-blue);
-}
-
-/* BOTONES: ACCIÓN CLARA (COMO "ABRIR CUENTA") */
-.btn-terminal {
+h2 {
+    color: var(--nobel-blue);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--nobel-gray);
+    padding-bottom: 5px;
     display: inline-block;
-    background-color: var(--brand-blue);
+}
+
+p { margin-bottom: 20px; color: #334155; }
+
+.text-mono { font-family: var(--font-mono); font-size: 0.9em; }
+.text-accent { color: var(--nobel-yellow); background: var(--nobel-dark); padding: 0 4px; }
+
+/* --- CAJAS ESTILO LATEX (TCOLORBOX) --- */
+
+/* 1. BLUEBOX (Conceptos/Productos) */
+.latex-bluebox {
+    background-color: var(--blue-box-bg); /* colback=nobel_blue!5 */
+    border: 1px solid var(--nobel-blue);  /* colframe=nobel_blue */
+    border-radius: var(--radius-beamer);
+    padding: 25px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.latex-bluebox:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 85, 164, 0.15);
+}
+
+.box-title {
+    font-family: var(--font-mono);
+    background: var(--nobel-blue);
+    color: var(--nobel-white);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    border-radius: 2px;
+}
+
+/* 2. CONSOLEBOX (Código/Técnico) */
+.latex-console {
+    background-color: var(--nobel-dark);
+    border: 1px solid var(--nobel-gray);
+    color: var(--nobel-white);
+    padding: 20px;
+    border-radius: var(--radius-beamer);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+.console-prompt { color: var(--nobel-gray); margin-right: 10px; }
+.console-cmd { color: var(--nobel-yellow); }
+
+/* 3. ALERTBOX (Call to Action Importante) */
+.latex-alert {
+    background-color: var(--nobel-white);
+    border-left: 4px solid var(--nobel-red);
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    margin: 20px 0;
+}
+
+/* --- BOTONES & INTERACCIÓN --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--nobel-blue);
     color: white;
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: var(--radius-beamer);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: background 0.2s;
     border: none;
-    font-family: var(--font-stack);
-    font-size: 0.95rem;
+    font-family: var(--font-main);
 }
 
-.btn-terminal:hover {
-    background-color: #2C3E50; /* Un poco más claro */
+.btn-primary:hover {
+    background-color: #003d7a;
 }
 
-.btn-alert {
-    background-color: var(--surface-white);
-    color: var(--brand-blue);
-    border: 2px solid var(--brand-blue);
+.btn-ghost {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--nobel-blue);
+    border: 2px solid var(--nobel-blue);
+    padding: 10px 22px;
+    border-radius: var(--radius-beamer);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
 }
 
-.btn-alert:hover {
-    background-color: #F1F5F9;
+.btn-ghost:hover {
+    background-color: var(--blue-box-bg);
 }
 
-/* FORMULARIOS AMIGABLES */
-.terminal-input {
-    width: 100%;
-    background: var(--surface-white);
-    border: 1px solid #CBD5E1;
-    color: var(--text-primary);
-    padding: 12px;
-    border-radius: 6px;
-    font-family: var(--font-stack);
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-.terminal-input:focus {
-    border-color: var(--brand-blue);
-    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
-}
-
-/* FOOTER */
+/* --- FOOTER (Beamer Footline) --- */
 footer {
-    border-top: 1px solid #E2E8F0;
+    background-color: var(--nobel-white);
+    border-top: 1px solid var(--nobel-gray);
     margin-top: 60px;
-    padding: 40px 0;
-    color: var(--text-secondary);
+    padding: 20px 0;
+    font-size: 0.8rem;
 }
 
-footer a { color: var(--brand-blue); text-decoration: none; font-weight: 500; }
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+/* --- SIMULACIÓN DEL LOGO "FRUTO DE LA VIDA" (CSS GEOMETRY) --- */
+/* Creamos un nodo visual simple para acompañar al texto */
+.node-graphic {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--nobel-yellow) 20%, transparent 20%),
+                radial-gradient(circle, transparent 20%, var(--nobel-blue) 20%, var(--nobel-blue) 40%, transparent 40%);
+    background-size: 20px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    opacity: 0.8;
+}
