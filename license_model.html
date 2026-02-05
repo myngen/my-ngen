@@ -3,132 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[My] n-GEN | Detalles Financieros</title>
+    <title>[My] n-GEN | Especificaciones Financieras</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <style>
-        /* Estilos específicos para datos financieros */
-        .financial-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px dashed #cbd5e1;
-        }
-        .financial-row:last-child { border-bottom: none; }
-        .financial-value { font-family: var(--font-mono); font-weight: bold; color: var(--nobel-blue); }
-    </style>
 </head>
 <body>
 
     <header class="slide-header">
         <div class="container header-content">
-            <a href="system_os.html" class="logo-tex">
-                <span class="logo-bracket"><</span> 
-                <span class="logo-gen">VOLVER A INFRAESTRUCTURA</span>
+            <a href="system_os.html" class="brand-lockup">
+                 <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L50 90 M10 30 L90 70 M90 30 L10 70" stroke="#cbd5e1" stroke-width="1"/>
+                    <circle cx="50" cy="10" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="85" cy="30" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="85" cy="70" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="50" cy="90" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="15" cy="70" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="15" cy="30" r="4" fill="#DC2626" opacity="0.8"/>
+                    <circle cx="50" cy="30" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="67" cy="40" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="67" cy="60" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="50" cy="70" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="33" cy="60" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="33" cy="40" r="5" fill="#0044CC" opacity="0.9"/>
+                    <circle cx="50" cy="50" r="8" fill="#FFD700" stroke="#eab308" stroke-width="1"/>
+                </svg>
+                <span class="logo-text" style="font-size: 1rem;"> < REGRESAR</span>
             </a>
-            <div class="status-badge">DOC: FINANCIAL_SPECS</div>
+            <div class="status-badge">DOC: REVENUE_ARCH</div>
         </div>
     </header>
 
-    <section class="container" style="max-width: 900px; padding-bottom: 60px;">
+    <section class="container" style="max-width: 900px; padding-top: 40px; padding-bottom: 60px;">
         
-        <div style="margin-bottom: 40px;">
-            <h1 style="color: var(--nobel-blue); margin-bottom: 10px;">Especificaciones de Licencia</h1>
-            <p style="font-size: 1.1rem; color: #475569;">
-                Desglose técnico de la rentabilidad y la arquitectura de ingresos del modelo [My] n-GEN.
-            </p>
-        </div>
+        <h1 style="color: var(--nobel-blue); margin-bottom: 10px;">Especificaciones de Licencia</h1>
+        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px;">
+            Desglose técnico de la rentabilidad y arquitectura de ingresos.
+        </p>
 
-        <div class="latex-console" style="margin-bottom: 50px;">
-            <div style="border-bottom: 1px solid #333; margin-bottom: 15px; padding-bottom: 5px;">
-                >_ INFRAESTRUCTURA INCLUIDA (ASSETS)
-            </div>
-            <p style="margin-bottom: 15px; color: #ddd;">
-                Al adquirir la licencia, usted no compra inventario. Usted alquila acceso a una infraestructura global llave en mano:
+        <div class="latex-console">
+            <h3 style="color: var(--nobel-blue); margin-bottom: 10px;">01. EL BACKEND LOGÍSTICO (ASSETS)</h3>
+            <p style="margin-bottom: 15px;">
+                Al adquirir la licencia, usted alquila acceso a una infraestructura global llave en mano:
             </p>
-            <ul style="list-style: none; font-size: 0.9rem; line-height: 1.8;">
-                <li><span style="color: var(--tech-green);">[ACTIVE]</span> MANUFACTURA: Plantas grado farmacéutico (FDA/FSSC 22000).</li>
-                <li><span style="color: var(--tech-green);">[ACTIVE]</span> LOGÍSTICA: Envíos a 21 países desde la nube.</li>
-                <li><span style="color: var(--tech-green);">[ACTIVE]</span> FINTECH: Pasarela de cobro y dispersión de comisiones.</li>
+            <ul style="list-style: none; line-height: 1.8;">
+                <li><span class="text-blue">[✓]</span> MANUFACTURA: Plantas grado farmacéutico (FDA/FSSC 22000).</li>
+                <li><span class="text-blue">[✓]</span> LOGÍSTICA: Envíos a 21 países desde la nube.</li>
+                <li><span class="text-blue">[✓]</span> FINTECH: Pasarela de cobro y dispersión de comisiones.</li>
             </ul>
         </div>
 
-        <h2 style="color: var(--nobel-blue); margin-bottom: 30px;">VECTORES DE INGRESO</h2>
+        <h2 style="color: var(--nobel-blue); margin-bottom: 30px;">02. VECTORES DE INGRESO</h2>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
 
             <div class="latex-bluebox">
-                <span class="box-title">VECTOR A: CASH FLOW</span>
-                <h3 style="margin-top: 15px; color: var(--nobel-blue);">Margen Transaccional</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 20px;">
-                    Ganancia inmediata por la conexión entre el usuario final y la planta de manufactura (Dropshipping).
+                <span class="status-badge" style="position: absolute; top: 15px; right: 15px; border-color: var(--nobel-yellow); color: #b45309;">CASH FLOW</span>
+                <h3 style="margin-top: 5px; color: var(--nobel-blue);">Margen Transaccional</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 20px; color: var(--text-muted);">
+                    Ganancia inmediata por conexión usuario-planta (Dropshipping).
                 </p>
-
-                <div class="financial-row">
+                <div style="border-bottom: 1px dashed #cbd5e1; padding: 10px 0; display: flex; justify-content: space-between;">
                     <span>Retail Profit:</span>
-                    <span class="financial-value" style="color: var(--tech-green);">20% - 40%</span>
+                    <strong class="text-blue">20% - 40%</strong>
                 </div>
-                <div class="financial-row">
-                    <span>Riesgo de Stock:</span>
-                    <span class="financial-value">0% (Nulo)</span>
-                </div>
-                <div class="financial-row">
-                    <span>Pago:</span>
-                    <span class="financial-value">Inmediato / Quincenal</span>
+                <div style="padding: 10px 0; display: flex; justify-content: space-between;">
+                    <span>Riesgo Stock:</span>
+                    <strong>0% (Nulo)</strong>
                 </div>
             </div>
 
             <div class="latex-bluebox">
-                <span class="box-title">VECTOR B: ASSET BUILDING</span>
-                <h3 style="margin-top: 15px; color: var(--nobel-blue);">Royalty de Red (Recurrente)</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 20px;">
-                    Ingresos pasivos generados por el volumen de facturación de los nodos operativos que instales en el sistema.
+                <span class="status-badge" style="position: absolute; top: 15px; right: 15px;">ASSET BUILDING</span>
+                <h3 style="margin-top: 5px; color: var(--nobel-blue);">Royalty de Red</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 20px; color: var(--text-muted);">
+                    Ingresos pasivos por volumen de facturación de nodos operativos.
                 </p>
-
-                <div class="financial-row">
+                <div style="border-bottom: 1px dashed #cbd5e1; padding: 10px 0; display: flex; justify-content: space-between;">
                     <span>Nivel 1 (Directos):</span>
-                    <span class="financial-value">10% + 10% (Bono)</span>
+                    <strong class="text-blue">10% + 10% (Bono)</strong>
                 </div>
-                <div class="financial-row">
+                <div style="padding: 10px 0; display: flex; justify-content: space-between;">
                     <span>Nivel 2 (Indirectos):</span>
-                    <span class="financial-value">8% - 13%</span>
-                </div>
-                <div class="financial-row">
-                    <span>Profundidad:</span>
-                    <span class="financial-value">Infinita (Generacional)</span>
+                    <strong class="text-blue">8% - 13%</strong>
                 </div>
             </div>
 
         </div>
 
-        <div class="latex-alert" style="margin-top: 50px;">
-            <strong style="color: var(--nobel-blue); font-size: 1.1rem;">>> PERFIL DEL OPERADOR (REQUISITOS)</strong>
-            <ul style="margin-top: 15px; padding-left: 20px; color: #334155; line-height: 1.6;">
-                <li style="margin-bottom: 10px;"><strong>Mentalidad de Arquitecto:</strong> Entender que se construye un activo a mediano plazo, no un empleo de sueldo fijo.</li>
-                <li style="margin-bottom: 10px;"><strong>Matrícula de Sistema:</strong> Capacidad de inversión mínima para el Kit de Inicio (aprox. 50€ / $55 USD).</li>
-                <li style="margin-bottom: 10px;"><strong>Disciplina Técnica:</strong> Compromiso para estudiar y ejecutar el sistema educativo [My] n-GEN.</li>
-            </ul>
-        </div>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <p class="text-mono" style="margin-bottom: 15px; color: var(--nobel-blue);">
-                ¿CUMPLES CON EL PERFIL TÉCNICO?
-            </p>
-            <a href="access_request.html" class="btn-primary" style="width: 100%; max-width: 400px;">
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="access_request.html" class="btn-alert" style="width: 100%; max-width: 400px; padding: 15px;">
                 INICIAR PROCESO DE ALTA
             </a>
         </div>
 
     </section>
-
-    <nav style="background: var(--blue-box-bg); padding: 30px 0; text-align: center; border-top: 1px solid var(--nobel-blue);">
-        <div class="container">
-            <a href="system_os.html" class="btn-ghost" style="font-size: 0.85rem;">
-                < REGRESAR A VISIÓN GENERAL
-            </a>
-        </div>
-    </nav>
 
 </body>
 </html>
