@@ -1,41 +1,58 @@
-/* [My] n-GEN | NOBEL ENGINEERING STYLESHEET v2.0 */
-/* ESTADO: CLEAN / ACADEMIC / DATA-DRIVEN */
+/* [My] n-GEN | NOBEL ENGINEERING STYLESHEET v3.0 */
+/* ESTADO: HUMAN INTERFACE / HIGH LEGIBILITY */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap');
 
 :root {
-    /* PALETA NOBEL (ESTRICTA) */
-    --paper-white: #ffffff;      /* Fondo Principal */
-    --paper-off: #f8fafc;        /* Fondos secundarios (Cajas) */
-    --text-main: #1e293b;        /* Texto principal (Casi negro) */
-    --text-muted: #64748b;       /* Texto secundario (Gris técnico) */
+    /* PALETA NOBEL (SOLAR & TÉCNICA) */
+    --paper-white: #ffffff;
+    --paper-off: #f8fafc;        /* Gris muy suave para fondos */
+    --text-main: #0f172a;        /* Azul muy oscuro (Casi negro, más suave) */
+    --text-body: #334155;        /* Gris oscuro para lectura cómoda */
     
-    --nobel-blue: #0044CC;       /* ESTRUCTURA / DATOS / CONFIANZA */
-    --nobel-yellow: #FFD700;     /* ENERGÍA / ILUMINACIÓN (Bordes, acentos) */
-    --nobel-red: #DC2626;        /* ACCIÓN / ALERTA / POTENCIA */
+    --nobel-blue: #0044CC;       /* Confianza / Estructura */
+    --nobel-yellow: #FFD700;     /* Energía */
+    --nobel-red: #DC2626;        /* Acción */
 
-    /* TIPOGRAFÍA */
-    --font-stack: 'JetBrains Mono', 'Courier New', monospace;
+    /* TIPOGRAFÍA HÍBRIDA */
+    --font-human: 'Inter', system-ui, -apple-system, sans-serif; /* Lectura */
+    --font-tech: 'JetBrains Mono', monospace;                    /* Datos */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
 
 body {
     background-color: var(--paper-white);
-    color: var(--text-main);
-    font-family: var(--font-stack);
-    line-height: 1.6;
-    font-size: 16px;
+    color: var(--text-body);
+    font-family: var(--font-human); /* AHORA ES SANS-SERIF POR DEFECTO */
+    line-height: 1.7;               /* Más espacio entre líneas */
+    font-size: 17px;                /* Letra un poco más grande */
+    -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; transition: 0.2s; }
+h1, h2, h3, h4 {
+    color: var(--text-main);
+    font-weight: 800; /* Títulos gruesos y potentes */
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px; /* Un toque moderno y compacto */
+}
 
-/* HEADER CON LOGO SVG */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+a { text-decoration: none; transition: 0.2s; color: inherit; }
+
+/* HEADER */
 .slide-header {
-    background: var(--paper-white);
+    background: rgba(255, 255, 255, 0.95);
     border-bottom: 2px solid var(--nobel-blue);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(5px);
 }
 
 .header-content {
@@ -44,104 +61,126 @@ a { text-decoration: none; transition: 0.2s; }
     align-items: center;
 }
 
-/* LOGO CONTAINER */
 .brand-lockup {
     display: flex;
     align-items: center;
     gap: 12px;
-    text-decoration: none;
 }
 
 .logo-text {
-    font-weight: bold;
+    font-family: var(--font-tech); /* El logo mantiene el toque técnico */
+    font-weight: 700;
     color: var(--nobel-blue);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: -1px;
 }
 
 /* CONTENEDORES */
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 900px; /* Ancho controlado para que no canse leer */
     margin: 0 auto;
 }
 
-/* CAJAS TÉCNICAS (Reemplazo de las ventanas negras) */
+/* CAJAS TÉCNICAS (Mejoradas) */
 .latex-bluebox {
-    background: var(--paper-off);
-    border: 1px solid var(--nobel-blue);
-    padding: 25px;
-    position: relative;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 0px rgba(0, 68, 204, 0.1);
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--nobel-blue);
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
 }
 
+.latex-bluebox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* CONSOLA DE DATOS (Solo para specs técnicas) */
 .latex-console {
-    background: #f1f5f9; /* Gris muy claro, no negro */
-    border-left: 4px solid var(--nobel-blue);
-    padding: 20px;
-    font-size: 0.9rem;
+    font-family: var(--font-tech);
+    background: #f1f5f9;
+    padding: 15px;
+    font-size: 0.85rem;
     color: var(--text-main);
-    font-family: var(--font-stack);
+    border-radius: 6px;
     margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
 }
 
-/* BOTONES */
+/* PLACEHOLDER PARA FUTURAS IMÁGENES */
+.img-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f1f5f9;
+    border: 2px dashed #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-family: var(--font-tech);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* BOTONES (Más sólidos y clicables) */
 .btn-primary {
     display: inline-block;
     background: var(--nobel-blue);
     color: white;
-    padding: 12px 25px;
-    font-weight: bold;
-    border: 1px solid var(--nobel-blue);
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    padding: 16px 32px;
+    font-weight: 700;
+    border-radius: 6px; /* Botón moderno */
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 68, 204, 0.2);
 }
 .btn-primary:hover {
-    background: white;
-    color: var(--nobel-blue);
+    background: #003399;
+    transform: translateY(-1px);
 }
 
 .btn-ghost {
     display: inline-block;
-    background: transparent;
+    background: white;
     color: var(--nobel-blue);
-    padding: 12px 25px;
-    border: 1px solid var(--nobel-blue);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
+    padding: 14px 30px;
+    border: 2px solid var(--nobel-blue);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
 }
 .btn-ghost:hover {
-    background: var(--paper-off);
+    background: #f0f7ff;
 }
 
 .btn-alert {
     background: var(--nobel-red);
     color: white;
-    border: 1px solid var(--nobel-red);
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-weight: 700;
 }
 .btn-alert:hover {
-    background: white;
-    color: var(--nobel-red);
+    background: #b91c1c;
 }
 
-/* BADGES DE ESTATUS */
+/* UTILIDADES */
+.text-mono { font-family: var(--font-tech); font-size: 0.85rem; }
+.text-blue { color: var(--nobel-blue); font-weight: 600; }
+.text-bold { font-weight: 700; color: var(--text-main); }
+
+/* BADGES */
 .status-badge {
-    font-size: 0.75rem;
-    border: 1px solid var(--nobel-blue);
+    font-family: var(--font-tech);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    background: #eff6ff;
     color: var(--nobel-blue);
-    padding: 4px 8px;
-    text-transform: uppercase;
-    background: rgba(0, 68, 204, 0.05);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
 }
-
-/* TABLAS Y LISTAS */
-ul { list-style: none; }
-li { margin-bottom: 5px; }
-
-/* UTILIDADES DE TEXTO */
-.text-mono { font-family: var(--font-stack); }
-.text-blue { color: var(--nobel-blue); }
-.text-red { color: var(--nobel-red); }
-.text-yellow { color: #d4b106; } /* Amarillo oscurecido para legibilidad en blanco */
