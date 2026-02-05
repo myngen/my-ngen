@@ -3,90 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[My] n-GEN :: UPLINK REQUEST</title>
+    <title>[My] n-GEN :: SOLICITUD DE ACCESO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <style>
-        /* ESTILOS DE FORMULARIO DE TERMINAL */
+        /* ESTILOS DE FORMULARIO DE TERMINAL LIMPIA */
         .terminal-input {
             width: 100%;
-            background: #0f1218;
-            border: 1px solid #333;
-            color: var(--nobel-blue);
+            background: #FFF; /* Fondo blanco para mayor confianza */
+            border: 1px solid #cbd5e1;
+            color: var(--nobel-dark);
             padding: 15px;
-            font-family: var(--font-stack);
+            font-family: var(--font-main);
             margin-bottom: 20px;
             font-size: 1rem;
+            border-radius: 4px;
+            transition: border 0.2s;
         }
         
         .terminal-input:focus {
-            border-color: var(--alert-yellow);
-            background: #151920;
+            border-color: var(--nobel-blue);
+            box-shadow: 0 0 0 3px rgba(0, 85, 164, 0.1);
+            outline: none;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
-            color: var(--text-dim);
-            font-size: 0.8rem;
+            color: var(--nobel-blue);
+            font-size: 0.85rem;
+            font-weight: bold;
             text-transform: uppercase;
+            font-family: var(--font-mono);
+        }
+
+        select.terminal-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230055A4%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right .7em top 50%;
+            background-size: .65em auto;
         }
     </style>
 </head>
 <body>
 
-    <div class="container" style="max-width: 600px; padding-top: 40px;">
+    <header class="slide-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-tex">
+                <span class="logo-bracket"><</span> 
+                <span class="logo-gen">CANCELAR</span>
+            </a>
+            <div class="status-badge">UPLINK: SECURE</div>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 600px; padding-bottom: 60px;">
         
-        <header class="terminal-head">
-            <a href="index.html" class="logo">< [ ABORTAR ]</a>
-            <div class="mono-text" style="color: var(--alert-yellow);">SECURE_CHANNEL</div>
-        </header>
+        <div style="margin-bottom: 30px;">
+            <h1 style="color: var(--nobel-blue);">Iniciar Protocolo</h1>
+            <p style="color: #475569;">
+                Completa los datos para coordinar el envío de tu hardware (productos) o agendar una consultoría de negocio. Respuesta en < 24h.
+            </p>
+        </div>
 
-        <h1 style="color: var(--nobel-blue);">SOLICITUD DE ENLACE</h1>
-        <p class="mono-text" style="margin-bottom: 30px;">
-            El acceso a los protocolos [My] n-GEN requiere validación manual. Complete los datos para iniciar el handshake.
-        </p>
-
-        <form action="https://formsubmit.co/TU_EMAIL_AQUI" method="POST">
+        <form action="access_granted.html" method="POST" class="latex-bluebox" style="padding: 40px;">
             
-            <input type="hidden" name="_next" value="https://TU_USUARIO_GITHUB.github.io/TU_REPO/access_granted.html">
-            <input type="hidden" name="_subject" value="[n-GEN] NUEVA SOLICITUD DE ACCESO">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
+            <div>
+                <label for="name">NOMBRE DE OPERADOR:</label>
+                <input type="text" name="name" id="name" class="terminal-input" required placeholder="Tu Nombre Completo">
+            </div>
 
             <div>
-                <label for="name">ID / NOMBRE OPERATIVO:</label>
-                <input type="text" name="name" id="name" class="terminal-input" required placeholder="Ingresar identificación...">
+                <label for="phone">TERMINAL MÓVIL (WHATSAPP):</label>
+                <input type="tel" name="phone" id="phone" class="terminal-input" required placeholder="+34 600 000 000">
             </div>
 
             <div>
                 <label for="email">PUNTO DE CONTACTO (EMAIL):</label>
-                <input type="email" name="email" id="email" class="terminal-input" required placeholder="email@dominio.com">
+                <input type="email" name="email" id="email" class="terminal-input" required placeholder="email@ejemplo.com">
             </div>
 
             <div>
                 <label for="protocol">PROTOCOLO REQUERIDO:</label>
-                <select name="protocol" id="protocol" class="terminal-input" style="color: var(--text-primary);">
-                    <option value="FOCUS_PROTOCOL">PROTOCOL_FOCUS (Cognitivo)</option>
-                    <option value="REPAIR_PROTOCOL">PROTOCOL_REPAIR (Estructural)</option>
-                    <option value="SYSTEM_LICENSE">SYSTEM OPERATOR (Licencia de Negocio)</option>
-                    <option value="GENERAL_INQUIRY">CONSULTA DE ARQUITECTURA</option>
+                <select name="protocol" id="protocol" class="terminal-input" required>
+                    <option value="" disabled selected>-- SELECCIONA UNA OPCIÓN --</option>
+                    <optgroup label="HARDWARE DE SALUD">
+                        <option value="PROTOCOL_SHIELD">PROTOCOL: SHIELD [Inmunológico]</option>
+                        <option value="PROTOCOL_VNERGY">PROTOCOL: V-NERGY [Energía/Deporte]</option>
+                        <option value="PROTOCOL_RESET">PROTOCOL: RESET [Digestivo]</option>
+                    </optgroup>
+                    <optgroup label="INFRAESTRUCTURA DE NEGOCIO">
+                        <option value="SYSTEM_LICENSE">LICENCIA DE OPERADOR (Negocio)</option>
+                    </optgroup>
+                    <option value="GENERAL_INQUIRY">OTRA CONSULTA TÉCNICA</option>
                 </select>
             </div>
 
             <div>
                 <label for="message">LOG DE OBJETIVOS (OPCIONAL):</label>
-                <textarea name="message" id="message" rows="4" class="terminal-input" placeholder="Describa su bio-fricción o interés comercial..."></textarea>
+                <textarea name="message" id="message" rows="4" class="terminal-input" placeholder="Describe brevemente qué quieres mejorar en tu salud o qué buscas en el negocio..."></textarea>
             </div>
 
-            <button type="submit" class="btn-terminal btn-alert" style="width: 100%; cursor: pointer;">
-                >> ENVIAR PAQUETE DE DATOS
+            <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; font-size: 1rem; margin-top: 10px;">
+                >> ENVIAR SOLICITUD
             </button>
+            
+            <p style="font-size: 0.75rem; color: #94a3b8; text-align: center; margin-top: 20px;">
+                Tus datos están encriptados y no se compartirán con terceros.
+            </p>
         </form>
 
-        <footer style="margin-top: 40px; text-align: center; font-size: 0.7rem; color: #444;">
-            ENCRIPTACIÓN: STANDARD_TLS. SUS DATOS PERMANECEN EN EL NÚCLEO.
-        </footer>
     </div>
 
 </body>
