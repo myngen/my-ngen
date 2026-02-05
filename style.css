@@ -3,13 +3,14 @@
 
 :root {
     /* PALETA TRIANA-TECH */
-    --bg-base: #F8FAFC;          /* Blanco clínico suave, no agresivo */
-    --surface-white: #FFFFFF;    /* Tarjetas blancas */
-    --text-primary: #1E293B;     /* Gris oscuro profesional (no negro puro) */
-    --text-secondary: #64748B;   /* Gris para explicaciones */
-    --brand-blue: #0F172A;       /* Azul marino profundo (Autoridad/Ingeniero) */
-    --accent-orange: #EA580C;    /* Naranja cálido (Energía/Sol de Sevilla) */
-    --success-green: #10B981;    /* Verde Salud */
+  :root {
+    --nobel-blue: #0055A4;
+    --nobel-yellow: #FFD700;
+    --nobel-red: #E4002B;
+    --nobel-dark: #0A0C10;
+    --nobel-gray: #A0AEC0;
+    --white: #FFFFFF;
+}
     
     /* TIPOGRAFÍA HUMANA */
     --font-stack: 'Inter', 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
@@ -168,3 +169,4 @@ footer {
 }
 
 footer a { color: var(--brand-blue); text-decoration: none; font-weight: 500; }
+
