@@ -1,52 +1,41 @@
-/* [My] n-GEN | LATEX STYLE INTERFACE v2.0 */
-/* BASE: Ingeniería, Limpieza, Autoridad Técnica */
+/* [My] n-GEN | NOBEL ENGINEERING STYLESHEET v2.0 */
+/* ESTADO: CLEAN / ACADEMIC / DATA-DRIVEN */
 
 :root {
-    /* --- PALETA ELEMENTAL NOBEL (Extraída de ngen_slides.cls) --- */
-    --nobel-blue:   #0055A4;  /* Estructura / Headers */
-    --nobel-yellow: #FFD700;  /* Acentos / Energía */
-    --nobel-red:    #E4002B;  /* Alertas / Puntos Críticos */
-    --nobel-dark:   #0A0C10;  /* Consola / Pie de página */
-    --nobel-gray:   #A0AEC0;  /* Bordes pasivos / Estructura */
-    --nobel-white:  #FFFFFF;  /* Fondo Base (Papel Académico) */
-    --tech-green:   #00FF41;  /* Status Online */
+    /* PALETA NOBEL (ESTRICTA) */
+    --paper-white: #ffffff;      /* Fondo Principal */
+    --paper-off: #f8fafc;        /* Fondos secundarios (Cajas) */
+    --text-main: #1e293b;        /* Texto principal (Casi negro) */
+    --text-muted: #64748b;       /* Texto secundario (Gris técnico) */
     
-    /* --- DERIVADOS PARA UI --- */
-    --blue-box-bg:  #F0F7FF;  /* Fondo suave para las cajas azules */
-    --shadow-card:  0 4px 6px -1px rgba(0, 85, 164, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
-    
-    /* --- TIPOGRAFÍA (Professional Fonts) --- */
-    --font-main: 'Arial', 'Helvetica Neue', Helvetica, sans-serif; /* \setmainfont{Arial} */
-    --font-mono: 'Courier New', Courier, monospace; /* \setmonofont{Courier New} */
-    
-    --radius-beamer: 4px; /* Bordes ligeramente suavizados, pero técnicos */
+    --nobel-blue: #0044CC;       /* ESTRUCTURA / DATOS / CONFIANZA */
+    --nobel-yellow: #FFD700;     /* ENERGÍA / ILUMINACIÓN (Bordes, acentos) */
+    --nobel-red: #DC2626;        /* ACCIÓN / ALERTA / POTENCIA */
+
+    /* TIPOGRAFÍA */
+    --font-stack: 'JetBrains Mono', 'Courier New', monospace;
 }
 
-/* RESET ESTRUCTURAL */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
 
 body {
-    background-color: var(--nobel-white);
-    color: var(--nobel-dark);
-    font-family: var(--font-main);
+    background-color: var(--paper-white);
+    color: var(--text-main);
+    font-family: var(--font-stack);
     line-height: 1.6;
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* LAYOUT CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+a { text-decoration: none; transition: 0.2s; }
 
-/* --- HEADER: ESTILO BEAMER --- */
-header.slide-header {
-    background: var(--nobel-white);
-    border-bottom: 2px solid var(--nobel-blue); /* La línea azul del slide */
-    padding: 20px 0;
-    margin-bottom: 40px;
+/* HEADER CON LOGO SVG */
+.slide-header {
+    background: var(--paper-white);
+    border-bottom: 2px solid var(--nobel-blue);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header-content {
@@ -55,171 +44,104 @@ header.slide-header {
     align-items: center;
 }
 
-/* LOGO TIPO LATEX (\logoNGEN) */
-.logo-tex {
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
-    color: var(--nobel-dark);
+/* LOGO CONTAINER */
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: var(--nobel-blue);
+    font-size: 1.2rem;
     letter-spacing: -1px;
 }
 
-.logo-bracket { color: var(--nobel-dark); font-weight: bold; }
-.logo-my { font-family: var(--font-main); font-weight: normal; }
-.logo-n { font-style: italic; }
-.logo-gen { font-weight: bold; color: var(--nobel-dark); }
-
-/* INDICADOR DE ESTADO */
-.status-badge {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    background: var(--nobel-dark);
-    color: var(--tech_green); /* Error en variable CSS corregido: usar tech-green */
-    color: #00FF41; 
-    padding: 4px 10px;
-    border-radius: 2px;
-    border: 1px solid var(--nobel-gray);
+/* CONTENEDORES */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* --- TIPOGRAFÍA & TEXTOS --- */
-h1 {
-    color: var(--nobel-blue); /* \setbeamercolor{frametitle} */
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-h2 {
-    color: var(--nobel-blue);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--nobel-gray);
-    padding-bottom: 5px;
-    display: inline-block;
-}
-
-p { margin-bottom: 20px; color: #334155; }
-
-.text-mono { font-family: var(--font-mono); font-size: 0.9em; }
-.text-accent { color: var(--nobel-yellow); background: var(--nobel-dark); padding: 0 4px; }
-
-/* --- CAJAS ESTILO LATEX (TCOLORBOX) --- */
-
-/* 1. BLUEBOX (Conceptos/Productos) */
+/* CAJAS TÉCNICAS (Reemplazo de las ventanas negras) */
 .latex-bluebox {
-    background-color: var(--blue-box-bg); /* colback=nobel_blue!5 */
-    border: 1px solid var(--nobel-blue);  /* colframe=nobel_blue */
-    border-radius: var(--radius-beamer);
+    background: var(--paper-off);
+    border: 1px solid var(--nobel-blue);
     padding: 25px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 20px;
     position: relative;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 0px rgba(0, 68, 204, 0.1);
 }
 
-.latex-bluebox:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 85, 164, 0.15);
-}
-
-.box-title {
-    font-family: var(--font-mono);
-    background: var(--nobel-blue);
-    color: var(--nobel-white);
-    padding: 4px 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: inline-block;
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    border-radius: 2px;
-}
-
-/* 2. CONSOLEBOX (Código/Técnico) */
 .latex-console {
-    background-color: var(--nobel-dark);
-    border: 1px solid var(--nobel-gray);
-    color: var(--nobel-white);
+    background: #f1f5f9; /* Gris muy claro, no negro */
+    border-left: 4px solid var(--nobel-blue);
     padding: 20px;
-    border-radius: var(--radius-beamer);
-    font-family: var(--font-mono);
     font-size: 0.9rem;
-    margin: 20px 0;
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    margin-bottom: 20px;
 }
 
-.console-prompt { color: var(--nobel-gray); margin-right: 10px; }
-.console-cmd { color: var(--nobel-yellow); }
-
-/* 3. ALERTBOX (Call to Action Importante) */
-.latex-alert {
-    background-color: var(--nobel-white);
-    border-left: 4px solid var(--nobel-red);
-    padding: 20px;
-    box-shadow: var(--shadow-card);
-    margin: 20px 0;
-}
-
-/* --- BOTONES & INTERACCIÓN --- */
+/* BOTONES */
 .btn-primary {
     display: inline-block;
-    background-color: var(--nobel-blue);
+    background: var(--nobel-blue);
     color: white;
-    padding: 12px 24px;
-    border-radius: var(--radius-beamer);
-    text-decoration: none;
-    font-weight: 700;
-    transition: background 0.2s;
-    border: none;
-    font-family: var(--font-main);
+    padding: 12px 25px;
+    font-weight: bold;
+    border: 1px solid var(--nobel-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
-
 .btn-primary:hover {
-    background-color: #003d7a;
+    background: white;
+    color: var(--nobel-blue);
 }
 
 .btn-ghost {
     display: inline-block;
-    background-color: transparent;
+    background: transparent;
     color: var(--nobel-blue);
-    border: 2px solid var(--nobel-blue);
-    padding: 10px 22px;
-    border-radius: var(--radius-beamer);
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.2s;
+    padding: 12px 25px;
+    border: 1px solid var(--nobel-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
-
 .btn-ghost:hover {
-    background-color: var(--blue-box-bg);
+    background: var(--paper-off);
 }
 
-/* --- FOOTER (Beamer Footline) --- */
-footer {
-    background-color: var(--nobel-white);
-    border-top: 1px solid var(--nobel-gray);
-    margin-top: 60px;
-    padding: 20px 0;
-    font-size: 0.8rem;
+.btn-alert {
+    background: var(--nobel-red);
+    color: white;
+    border: 1px solid var(--nobel-red);
+}
+.btn-alert:hover {
+    background: white;
+    color: var(--nobel-red);
 }
 
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* BADGES DE ESTATUS */
+.status-badge {
+    font-size: 0.75rem;
+    border: 1px solid var(--nobel-blue);
+    color: var(--nobel-blue);
+    padding: 4px 8px;
+    text-transform: uppercase;
+    background: rgba(0, 68, 204, 0.05);
 }
 
-/* --- SIMULACIÓN DEL LOGO "FRUTO DE LA VIDA" (CSS GEOMETRY) --- */
-/* Creamos un nodo visual simple para acompañar al texto */
-.node-graphic {
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, var(--nobel-yellow) 20%, transparent 20%),
-                radial-gradient(circle, transparent 20%, var(--nobel-blue) 20%, var(--nobel-blue) 40%, transparent 40%);
-    background-size: 20px 20px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    opacity: 0.8;
-}
+/* TABLAS Y LISTAS */
+ul { list-style: none; }
+li { margin-bottom: 5px; }
+
+/* UTILIDADES DE TEXTO */
+.text-mono { font-family: var(--font-stack); }
+.text-blue { color: var(--nobel-blue); }
+.text-red { color: var(--nobel-red); }
+.text-yellow { color: #d4b106; } /* Amarillo oscurecido para legibilidad en blanco */
