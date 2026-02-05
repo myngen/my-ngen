@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[My] n-GEN | Communications Node</title>
+    <title>[My] n-GEN | Nodo de Contacto</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
 
     <header class="slide-header">
         <div class="container header-content">
-            <a href="index.html" class="logo-tex">
-                <span class="logo-bracket">[</span>My<span class="logo-bracket">]</span> n-GEN
+            <a href="index.html" class="brand-lockup">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L50 90 M10 30 L90 70 M90 30 L10 70" stroke="#cbd5e1" stroke-width="1"/>
+                    <circle cx="50" cy="10" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="85" cy="30" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="85" cy="70" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="50" cy="90" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="15" cy="70" r="4" fill="#DC2626" opacity="0.8"/> <circle cx="15" cy="30" r="4" fill="#DC2626" opacity="0.8"/>
+                    <circle cx="50" cy="30" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="67" cy="40" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="67" cy="60" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="50" cy="70" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="33" cy="60" r="5" fill="#0044CC" opacity="0.9"/> <circle cx="33" cy="40" r="5" fill="#0044CC" opacity="0.9"/>
+                    <circle cx="50" cy="50" r="8" fill="#FFD700" stroke="#eab308" stroke-width="1"/>
+                </svg>
+                <span class="logo-text">[My] n-GEN</span>
             </a>
             <div class="status-badge">SYSTEM: LISTENING</div>
         </div>
@@ -22,51 +27,36 @@
         
         <div style="text-align: center; margin-bottom: 50px;">
             <h1 style="color: var(--nobel-blue); margin-bottom: 10px;">Centro de Comunicaciones</h1>
-            <p class="text-mono" style="color: #64748b;">
+            <p class="text-mono" style="color: var(--text-muted);">
                 SELECCIONE EL PROTOCOLO DE ENLACE PREFERIDO
             </p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
-            <div class="latex-bluebox" style="transition: transform 0.2s;">
-                <span class="box-title">OPCIÓN A: PROTOCOLO FORMAL</span>
-                <h3 style="margin-top: 15px; color: var(--nobel-blue); margin-bottom: 10px;">Solicitud de Acceso</h3>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 25px;">
-                    Utilice este canal para:
-                    <br>• Auditorías de Bio-Perfil.
-                    <br>• Solicitud de Licencias de Negocio.
-                    <br>• Dudas estructuradas.
+            <div class="latex-bluebox">
+                <span class="text-blue" style="font-weight:bold; font-size: 0.8rem;">OPCIÓN A: PROTOCOLO FORMAL</span>
+                <h3 style="margin-top: 10px; color: var(--nobel-blue); margin-bottom: 15px;">Solicitud de Acceso</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px;">
+                    Para auditorías de perfil, licencias de negocio y dudas técnicas estructuradas.
                 </p>
                 <a href="access_request.html" class="btn-primary" style="width: 100%; text-align: center;">
                     > ABRIR FORMULARIO
                 </a>
             </div>
 
-            <div class="latex-bluebox" style="transition: transform 0.2s; border-color: var(--tech-green);">
-                <span class="box-title" style="color: var(--tech-green); border-color: var(--tech-green);">OPCIÓN B: BAJA LATENCIA</span>
-                <h3 style="margin-top: 15px; color: var(--tech-green); margin-bottom: 10px;">Enlace Directo</h3>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 25px;">
-                    Canal rápido (WhatsApp) para:
-                    <br>• Preguntas puntuales.
-                    <br>• Urgencias de stock.
-                    <br>• Verificar si soy un humano real.
+            <div class="latex-bluebox" style="border-color: var(--nobel-blue);">
+                <span class="text-red" style="font-weight:bold; font-size: 0.8rem;">OPCIÓN B: BAJA LATENCIA</span>
+                <h3 style="margin-top: 10px; color: var(--nobel-blue); margin-bottom: 15px;">Enlace Directo</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px;">
+                    Canal rápido para preguntas puntuales, stock o verificación humana.
                 </p>
-                <a href="https://wa.me/34613861418" class="btn-ghost" style="width: 100%; text-align: center; border-color: var(--tech-green); color: var(--tech-green);">
+                <a href="https://wa.me/34600000000" class="btn-ghost" style="width: 100%; text-align: center;">
                     > INICIAR CHAT
                 </a>
             </div>
 
         </div>
-
-        <div style="margin-top: 60px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 30px;">
-            <p class="text-mono" style="font-size: 0.85rem; color: #94a3b8;">
-                UBICACIÓN OPERATIVA: SEVILLA, ESPAÑA (EU)<br>
-                ZONA HORARIA: CET (Central European Time)<br>
-                EMAIL: <a href="myngine.lab@gmail.com" style="color: var(--nobel-blue); text-decoration: none;">hola@my-ngen.com</a>
-            </p>
-        </div>
-
     </div>
 
 </body>
