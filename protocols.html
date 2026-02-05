@@ -3,136 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[My] n-GEN :: HARDWARE REPOSITORY</title>
+    <title>[My] n-GEN | Catálogo de Protocolos</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ESTILOS ESPECÍFICOS PARA EL GRID DE PROTOCOLOS */
-        .protocol-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2px;
-            background: var(--text-dim);
-            border: 1px solid var(--text-dim);
-            margin-top: 40px;
-        }
-
-        .protocol-card {
-            background: var(--void-black);
-            padding: 30px;
-            position: relative;
-            transition: all 0s; /* Zero Latency */
-        }
-
-        .protocol-card:hover {
-            background: #0f1218;
-        }
-
-        .protocol-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 4px;
-            background: var(--text-dim);
-            display: none;
-        }
-
-        .protocol-card:hover::before {
-            display: block;
-            background: var(--alert-yellow);
-        }
-
-        .tech-spec {
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            margin-top: 10px;
-            border-top: 1px dashed #333;
-            padding-top: 10px;
-        }
-
-        .tech-tag {
-            background: #1a1a1a;
-            color: var(--nobel-blue);
-            padding: 2px 6px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            margin-right: 5px;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
 
-    <div class="container">
-        <header class="terminal-head">
-            <a href="index.html" class="logo">< [ VOLVER AL KERNEL ]</a>
-            <div class="mono-text">MODULE: HARDWARE_LIST</div>
-        </header>
+    <header class="slide-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-tex">
+                <span class="logo-bracket"><</span> 
+                <span class="logo-gen">VOLVER AL KERNEL</span>
+            </a>
+            <div class="status-badge">MODULE: HARDWARE_LIST</div>
+        </div>
+    </header>
 
-        <section class="container" style="max-width: 900px;">
-            <div style="border-left: 4px solid var(--alert-yellow); padding-left: 20px; margin-bottom: 40px;">
-                <h1>ACTUALIZACIÓN DE HARDWARE</h1>
-                <p style="font-size: 1.1rem; max-width: 600px;">
-                    Protocolos de alta biodisponibilidad micelizada.
-                    <br>
-                    <span class="mono-text" style="color: var(--text-dim);">>> CRITERIO: Absorción en &lt;10 minutos (Zero Latency).</span>
-                </p>
-            </div>
+    <section class="container" style="max-width: 1000px; padding-bottom: 60px;">
+        
+        <div style="margin-bottom: 50px;">
+            <h1 style="color: var(--nobel-blue);">Arquitectura de Soluciones</h1>
+            <p style="font-size: 1.1rem; color: #334155; max-width: 700px;">
+                No necesitas 50 productos. Necesitas el protocolo correcto para el fallo específico de tu sistema.
+                <br><br>
+                He simplificado el catálogo en <strong>3 Frentes Tácticos</strong>. Todos cumplen el criterio de "Zero Latency": absorción micelizada en minutos, no horas.
+            </p>
+        </div>
 
-            <div class="protocol-grid">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+            <div class="latex-bluebox">
+                <span class="box-title">01. DEFENSA DE SISTEMA</span>
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3 style="color: var(--nobel-blue); margin: 0;">PROTOCOL: SHIELD</h3>
+                    <span class="text-mono" style="font-size: 0.8rem; color: var(--nobel-gray);">[INMUNE]</span>
+                </div>
                 
-                <article class="protocol-card">
-                    <div class="mono-text" style="color: var(--alert-yellow);">[ DISPONIBLE ]</div>
-                    <h2 style="border:none; padding:0; margin-top:10px; font-size: 1.5rem;">PROTOCOL_REPAIR</h2>
-                    <h3 style="font-size: 1rem; color: var(--text-dim); margin-bottom: 20px;">MATRIZ EXTRACELULAR (ECM)</h3>
-                    
-                    <p>
-                        Optimización de la regeneración de tejidos y síntesis de hormona de crecimiento. Diseñado para el mantenimiento estructural profundo.
-                    </p>
-
-                    <div class="tech-spec">
-                        <p><span class="tech-tag">INPUT:</span> L-Arginina Complex</p>
-                        <p><span class="tech-tag">TARGET:</span> Músculo / Tendón / Hueso</p>
-                        <p><span class="tech-tag">LATENCIA:</span> Baja (Nocturno)</p>
-                    </div>
-
-                    <a href="protocol_repair.html" class="btn-terminal" style="width: 100%; text-align: center; margin-top: 20px;">
-                        > INSPECCIONAR CÓDIGO
-                    </a>
-                </article>
-
-                <article class="protocol-card">
-                    <div class="mono-text" style="color: var(--alert-yellow);">[ HIGH DEMAND ]</div>
-                    <h2 style="border:none; padding:0; margin-top:10px; font-size: 1.5rem;">PROTOCOL_FOCUS</h2>
-                    <h3 style="font-size: 1rem; color: var(--text-dim); margin-bottom: 20px;">NEURAL OVERCLOCK</h3>
-                    
-                    <p>
-                        Eliminación de la niebla mental y aumento del voltaje sináptico. Energía sostenida sin picos de glucosa inestables.
-                    </p>
-
-                    <div class="tech-spec">
-                        <p><span class="tech-tag">INPUT:</span> Complejo B + Cafeína Natural</p>
-                        <p><span class="tech-tag">TARGET:</span> Neurotransmisores / CPU</p>
-                        <p><span class="tech-tag">LATENCIA:</span> Inmediata (3-8 min)</p>
-                    </div>
-
-                    <a href="protocol_focus.html" class="btn-terminal" style="width: 100%; text-align: center; margin-top: 20px;">
-                        > INSPECCIONAR CÓDIGO
-                    </a>
-                </article>
-
-            </div>
-
-            <div style="margin-top: 60px; background: #111; padding: 20px; font-size: 0.9rem;">
-                <p class="mono-text" style="color: var(--nobel-blue);">>> NOTA DEL ARQUITECTO:</p>
-                <p style="margin-top: 10px;">
-                    Estos módulos no son "suplementos vitamínicos". Son herramientas de ingeniería. Requieren constancia en la ejecución para reescribir la biología base del usuario.
+                <p style="margin-top: 15px; font-size: 0.95rem;">
+                    Tu cuerpo está bajo ataque constante (estrés, patógenos, contaminación). Este stack actúa como un <strong>Firewall Biológico</strong>. No esperes a enfermarte para instalar el antivirus.
                 </p>
+
+                <div style="background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 4px; font-size: 0.85rem; margin: 15px 0;">
+                    <div style="margin-bottom: 5px;"><strong>>> HARDWARE:</strong> Omniplus + One C Mix</div>
+                    <div style="margin-bottom: 5px;"><strong>>> OBJETIVO:</strong> Elevar Linfocitos T.</div>
+                    <div style="color: var(--tech-green);"><strong>>> LATENCIA:</strong> 8 Minutos (Micelizado).</div>
+                </div>
+
+                <a href="protocol_immune.html" class="btn-primary" style="width: 100%; text-align: center;">
+                    VER ESPECIFICACIONES
+                </a>
             </div>
 
-        </section>
+            <div class="latex-bluebox">
+                <span class="box-title">02. ENERGÍA CINÉTICA</span>
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3 style="color: var(--nobel-blue); margin: 0;">PROTOCOL: V-NERGY</h3>
+                    <span class="text-mono" style="font-size: 0.8rem; color: var(--nobel-gray);">[SPORT]</span>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 0.95rem;">
+                    Diseñado para atletas y mentes de alto rendimiento. Energía limpia y sostenida sin el "crash" del azúcar. Recuperación muscular acelerada post-esfuerzo.
+                </p>
 
-        <footer style="margin-top: 60px; border-top: 1px solid #333; padding: 20px 0; text-align: center;">
-            <p class="mono-text" style="color: #666;">[My] n-GEN HARDWARE DIVISION</p>
-        </footer>
-    </div>
+                <div style="background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 4px; font-size: 0.85rem; margin: 15px 0;">
+                    <div style="margin-bottom: 5px;"><strong>>> HARDWARE:</strong> Magnus + Ego Life</div>
+                    <div style="margin-bottom: 5px;"><strong>>> OBJETIVO:</strong> ATP & Hidratación.</div>
+                    <div style="color: var(--tech-green);"><strong>>> RESULTADO:</strong> Potencia Sostenida.</div>
+                </div>
+
+                <a href="protocol_sport.html" class="btn-primary" style="width: 100%; text-align: center;">
+                    VER ESPECIFICACIONES
+                </a>
+            </div>
+
+            <div class="latex-bluebox">
+                <span class="box-title">03. OPTIMIZACIÓN CENTRAL</span>
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3 style="color: var(--nobel-blue); margin: 0;">PROTOCOL: RESET</h3>
+                    <span class="text-mono" style="font-size: 0.8rem; color: var(--nobel-gray);">[GUT]</span>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 0.95rem;">
+                    Eres lo que absorbes, no lo que comes. Si tu "procesador central" (intestino) está sucio, todo el sistema falla. Limpieza profunda y restauración de flora.
+                </p>
+
+                <div style="background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 4px; font-size: 0.85rem; margin: 15px 0;">
+                    <div style="margin-bottom: 5px;"><strong>>> HARDWARE:</strong> Fiber + Probiotic</div>
+                    <div style="margin-bottom: 5px;"><strong>>> OBJETIVO:</strong> Barrido de Toxinas.</div>
+                    <div style="color: var(--tech-green);"><strong>>> SENSACIÓN:</strong> Ligereza Total.</div>
+                </div>
+
+                <a href="protocol_digest.html" class="btn-primary" style="width: 100%; text-align: center;">
+                    VER ESPECIFICACIONES
+                </a>
+            </div>
+
+        </div>
+
+        <div class="latex-alert" style="margin-top: 40px;">
+            <strong style="color: var(--nobel-blue);">NOTA DEL INGENIERO:</strong>
+            <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                Estos módulos funcionan por <strong>saturación positiva</strong>. Un sobre al mes no hace nada. La constancia es la única variable que depende de ti.
+            </p>
+        </div>
+
+    </section>
+
+    <nav style="background: var(--blue-box-bg); padding: 30px 0; text-align: center; border-top: 1px solid var(--nobel-blue);">
+        <div class="container">
+            <p class="text-mono" style="color: var(--nobel-gray); margin-bottom: 10px;">¿NO SABES QUÉ ELEGIR?</p>
+            <a href="access_request.html" class="btn-ghost">
+                SOLICITAR DIAGNÓSTICO PERSONALIZADO
+            </a>
+        </div>
+    </nav>
 
 </body>
 </html>
